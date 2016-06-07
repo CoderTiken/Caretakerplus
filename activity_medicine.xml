@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.tiken.caretakerfinal.Medicine">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Add Medicine"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MedicineName"
+        android:hint="Medicine Name"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/btnnegative"
+        android:textSize="20dp"
+        android:onClick="negative"
+        android:layout_below="@+id/MedicineName"
+        android:layout_toLeftOf="@+id/AmountText"
+        android:layout_toStartOf="@+id/AmountText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AmountText"
+        android:text=""
+        android:clickable="false"
+        android:editable="false"
+        android:textSize="30dp"
+        android:textAlignment="gravity"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/btnPositive"
+        android:layout_toLeftOf="@+id/btnPositive"
+        android:layout_toStartOf="@+id/btnPositive" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/btnPositive"
+        android:onClick="positive"
+        android:textSize="20dp"
+        android:layout_below="@+id/MedicineName"
+        android:layout_alignRight="@+id/MedicineName"
+        android:layout_alignEnd="@+id/MedicineName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Amount to Take"
+        android:id="@+id/textMAmount"
+        android:textSize="25dp"
+        android:textAlignment="gravity"
+        android:layout_alignBottom="@+id/AmountText"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3"
+        android:paddingBottom="7dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Set Alarm"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/btnnegative"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="27dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/Alarm1"
+        android:hint="Enter a time"
+        android:layout_above="@+id/ampm2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/ampm1"
+        android:layout_toStartOf="@+id/ampm1" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New ToggleButton"
+        android:id="@+id/ampm1"
+        android:textOn="Am"
+        android:textOff="Pm"
+        android:layout_below="@+id/textView4"
+        android:layout_alignRight="@+id/btnPositive"
+        android:layout_alignEnd="@+id/btnPositive" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New ToggleButton"
+        android:id="@+id/ampm2"
+        android:textOn="Am"
+        android:textOff="Pm"
+        android:layout_below="@+id/ampm1"
+        android:layout_alignLeft="@+id/ampm1"
+        android:layout_alignStart="@+id/ampm1" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New ToggleButton"
+        android:id="@+id/ampm3"
+        android:textOn="Am"
+        android:textOff="Pm"
+        android:layout_below="@+id/ampm2"
+        android:layout_alignLeft="@+id/ampm2"
+        android:layout_alignStart="@+id/ampm2" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New ToggleButton"
+        android:id="@+id/ampm4"
+        android:textOn="Am"
+        android:textOff="Pm"
+        android:layout_below="@+id/ampm3"
+        android:layout_alignLeft="@+id/ampm3"
+        android:layout_alignStart="@+id/ampm3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/Alarm2"
+        android:layout_above="@+id/ampm3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Enter a time"
+        android:layout_toLeftOf="@+id/ampm2"
+        android:layout_toStartOf="@+id/ampm2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/Alarm3"
+        android:layout_above="@+id/ampm4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Enter a time"
+        android:layout_toLeftOf="@+id/ampm3"
+        android:layout_toStartOf="@+id/ampm3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/Alarm4"
+        android:hint="Enter a time"
+        android:layout_alignBottom="@+id/ampm4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/ampm4"
+        android:layout_toStartOf="@+id/ampm4" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Another"
+        android:onClick="AddMore"
+        android:id="@+id/btnMore"
+        android:layout_below="@+id/Alarm4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btnClear"
+        android:layout_toStartOf="@+id/btnClear" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:onClick="cancel"
+        android:id="@+id/btnCancel"
+        android:layout_alignBottom="@+id/btnMore"
+        android:layout_alignRight="@+id/btnPositive"
+        android:layout_alignEnd="@+id/btnPositive" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:onClick="clear"
+        android:id="@+id/btnClear"
+        android:layout_above="@+id/btnFinish"
+        android:layout_toLeftOf="@+id/btnCancel"
+        android:layout_toStartOf="@+id/btnCancel" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Done"
+        android:id="@+id/btnFinish"
+        android:onClick="finish_med"
+        android:layout_below="@+id/btnMore"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/ampm4"
+        android:layout_alignEnd="@+id/ampm4" />
+
+</RelativeLayout>
